@@ -10,9 +10,9 @@ import { Component, ElementRef, HostListener, QueryList, Renderer2, ViewChild, V
 })
 export class BorderNaimationComponent {
 
-  myArray: number[] = Array.from<number>([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]);
+  myArray: number[] = Array.from<number>([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]);
 
-  @ViewChildren('card') elemRef: QueryList<ElementRef>;
+  @ViewChildren('box') elemRef: QueryList<ElementRef>;
   constructor(private renderer: Renderer2) {}
 
   @HostListener('mousemove', ['$event'])
@@ -21,6 +21,5 @@ export class BorderNaimationComponent {
       const el = element.nativeElement
       this.renderer.setStyle(el, 'background', `radial-gradient(200px circle at ${event.clientX - el.offsetLeft}px ${event.clientY - el.offsetTop}px, #9171f8, transparent)`);
     })
-    // console.log(`Mouse Position: X: ${event.clientX}, Y: ${event.clientY}`);
   }
 }
