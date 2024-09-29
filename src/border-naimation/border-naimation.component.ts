@@ -19,7 +19,7 @@ export class BorderNaimationComponent {
   onMouseMove(event: MouseEvent) {
     this.elemRef.forEach(element => {
       const el = element.nativeElement
-      this.renderer.setStyle(el, 'background', `radial-gradient(200px circle at ${event.clientX - el.offsetLeft}px ${event.clientY - el.offsetTop}px, #229c2c, transparent)`);
+      this.renderer.setStyle(el, 'background', `radial-gradient(200px circle at ${event.clientX - el.offsetLeft}px ${event.clientY - el.offsetTop}px, #9171f8, transparent)`);
     })
     // console.log(`Mouse Position: X: ${event.clientX}, Y: ${event.clientY}`);
   }
